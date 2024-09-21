@@ -1,9 +1,15 @@
+import viteReactPlugin from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
-import vercel from 'vite-plugin-vercel';
+import { viteSingleFile } from 'vite-plugin-singlefile';
+import viteConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  server: {
-    port: process.env.PORT,
-  },
-  plugins: [vercel()],
+  build: { reportCompressedSize: false },
+  base: "/techwiz-trip-planner",
+  plugins: [
+    viteConfigPaths(),
+    viteReactPlugin(),
+    // eslint-disable-next-line no-undef
+    process.env.INLINE ? viteSingleFile() : null,
+  ].filter(Boolean),
 });
