@@ -16,7 +16,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "yarn build && netlify deploy --prod",
     "build": "vite build",
     "dev": "vite --port 3000",
     "inline": "INLINE=true vite build",
