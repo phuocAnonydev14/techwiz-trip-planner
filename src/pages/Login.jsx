@@ -5,7 +5,7 @@ import {jwtDecode} from "jwt-decode";
 import {useLoggined} from "@/src/libs/hooks/useLoggined.js";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
-import {BASE_URL} from "@/lib/consts.js";
+import {BASE_URL} from "@/src/libs/consts.js";
 import {useState} from "react"
 
 export const Login = () => {
