@@ -5,7 +5,7 @@ import viteConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   build: { reportCompressedSize: false },
-  base: "/techwiz-trip-planner",
+  // base: "/techwiz-trip-planner",
   plugins: [
     viteConfigPaths(),
     viteReactPlugin(),
