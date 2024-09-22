@@ -18,7 +18,7 @@
     "predeploy": "npm run build",
     "deploy": "npm build && netlify deploy --prod",
     "build": "vite build",
-    "dev": "vite --port 3000",
+    "dev": "vite",
     "inline": "INLINE=true vite build",
     "preview": "vite preview",
     "start": "vite"
